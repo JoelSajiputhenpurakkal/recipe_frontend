@@ -1,1 +1,1 @@
-![erd diagram](https://github.com/user-attachments/assets/aeb9f1f3-1e01-48b0-9817-34e85d270dd0)
+![recipefinder_erd diagram](https://github.com/user-attachments/assets/7e7d073e-fa1c-4a91-8b02-336804c4d49e)
