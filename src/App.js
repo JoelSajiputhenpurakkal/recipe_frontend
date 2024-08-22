@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"; // Ensure Link is imported
 import SearchBar from "./components/SearchBar";
 import RecipeList from "./components/RecipeList";
 import RecipeSummary from "./components/RecipeSummary";
-import Wishlist from "./components/Wishlist.js";  // Import Wishlist component
+import Wishlist from "./components/Wishlist";
 import "./App.css";
 
 const App = () => {
@@ -27,11 +27,11 @@ const App = () => {
       <div className="App">
         <h1>Recipe Finder</h1>
         <SearchBar onSearch={fetchRecipes} />
-        <Link to="/wishlist" className="wishlist-button">Wishlist</Link> {/* Wishlist button */}
+        <Link to="/recipe_frontend/wishlist" className="wishlist-button">Wishlist</Link>
         <Routes>
-          <Route path="/" element={loading ? <p className="loading">Loading...</p> : <RecipeList recipes={recipes} />} />
-          <Route path="/recipe-summary" element={<RecipeSummary />} />
-          <Route path="/wishlist" element={<Wishlist />} />  {/* Wishlist route */}
+          <Route path="/recipe_frontend" element={loading ? <p className="loading">Loading...</p> : <RecipeList recipes={recipes} />} />
+          <Route path="/recipe_frontend/recipe-summary" element={<RecipeSummary />} />
+          <Route path="/recipe_frontend/wishlist" element={<Wishlist />} />
         </Routes>
       </div>
     </Router>
